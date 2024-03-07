@@ -26,36 +26,41 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full  mr-24 h-full p-10 grid grid-cols-1 md:grid-cols-6 max-w-7xl mx-auto gap-4 ">
-      {cards.map((card, i) => (
-        <div key={i} className={cn(card.className, "")}>
-          <motion.div
-            onClick={() => handleClick(card)}
-            className={cn(
-              card.className,
-              "relative cursor-pointer transition  overflow-hidden  hover:-translate-y-12 ",
-              selected?.id === card.id
-                ? " cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
-                : lastSelected?.id === card.id
-                ? "z-40 bg-white  h-full w-full"
-                : "bg-white  h-full w-full"
-            )}
-            layout
-          >
-            {selected?.id === card.id && <SelectedCard selected={selected} />}
-            <BlurImage card={card} />
-          </motion.div>
-        </div>
-      ))}
-      <motion.div
-        onClick={handleOutsideClick}
-        className={cn(
-          "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10",
-          selected?.id ? "pointer-events-auto" : "pointer-events-none"
-        )}
-        animate={{ opacity: selected?.id ? 0.3 : 0 }}
-      />
-    </div>
+    <>
+      <div className="w-full  mr-24 h-full p-10 grid grid-cols-1 md:grid-cols-6 max-w-7xl mx-auto gap-4 ">
+        {cards.map((card, i) => (
+          <div key={i} className={cn(card.className, "")}>
+            <motion.div
+              onClick={() => handleClick(card)}
+              className={cn(
+                card.className,
+                "relative cursor-pointer transition  overflow-hidden  hover:-translate-y-12 ",
+                selected?.id === card.id
+                  ? " cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
+                  : lastSelected?.id === card.id
+                  ? "z-40 bg-white  h-full w-full"
+                  : "bg-white  h-full w-full"
+              )}
+              layout
+            >
+              {selected?.id === card.id && <SelectedCard selected={selected} />}
+              <BlurImage card={card} />
+            </motion.div>
+          </div>
+        ))}
+        <motion.div
+          onClick={handleOutsideClick}
+          className={cn(
+            "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10",
+            selected?.id ? "pointer-events-auto" : "pointer-events-none"
+          )}
+          animate={{ opacity: selected?.id ? 0.3 : 0 }}
+        />
+      </div>
+      <button className="float-right mr-32 inline-flex h-12 animate-shimmer  items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        View All Crafts
+      </button>
+    </>
   );
 };
 

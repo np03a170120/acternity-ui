@@ -10,13 +10,20 @@ export function LayoutGridHome() {
   return (
     <div className="h-screen py-20 w-full">
       <div className="flex items-center justify-between">
-        <h1 className=" ml-12 text-left text-4xl md:text-5xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          Team <br /> hardwork & crafts.
+        <h1
+          data-aos="fade-up"
+          className=" ml-12 text-left text-4xl md:text-5xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
+        >
+          <span className="text-3xl">Project</span> <br /> Residental
+          Architecture.
         </h1>
-        <p className=" font-normal text-base text-neutral-300 max-w-lg text-right mr-12">
-          Gaatha (Nepali: गाथा), translating to stories is an architecture and
-          design firm based in Kathmandu started in 2019 by a young group of
-          architects with a common vision to redefine architecture and design
+        <p
+          data-aos="fade-up"
+          className=" font-normal text-base text-neutral-300 max-w-lg text-right mr-12"
+        >
+          कृथ्या , translating to stories is an architecture and design firm
+          based in Kathmandu started in 2019 by a young group of architects with
+          a common vision to redefine architecture and design
         </p>
       </div>
       <LayoutGrid cards={cards} />

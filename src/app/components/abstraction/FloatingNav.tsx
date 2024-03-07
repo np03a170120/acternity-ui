@@ -25,7 +25,7 @@ export function FloatingNavbar() {
   ];
   return (
     <div className="relative  w-full">
-      <FloatingNav navItems={navItems} />
+      <FloatingNav className="navbar" navItems={navItems} />
       <SpotlightPreview />
     </div>
   );
