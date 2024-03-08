@@ -29,9 +29,9 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
     <>
       <div
         data-aos-easing="linear"
-        data-aos-duration="600"
+        data-aos-duration="200"
         data-aos="fade-down"
-        className="w-full  mr-24 h-[60vh] p-10 grid grid-cols-1 md:grid-cols-6 max-w-7xl mx-auto gap-4 "
+        className="w-full  mr-24 h-[65vh] p-10 grid grid-cols-1 md:grid-cols-6 max-w-7xl mx-auto gap-4 "
       >
         {cards.map((card, i) => (
           <div key={i} className={cn(card.className, "")}>

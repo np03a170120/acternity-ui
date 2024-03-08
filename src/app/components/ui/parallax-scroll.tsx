@@ -9,7 +9,7 @@ export const ParallaxScroll = ({
   images,
   className,
 }: {
-  images: string[];
+  images: Array<any>;
   className?: string;
 }) => {
   const gridRef = useRef<any>(null);
