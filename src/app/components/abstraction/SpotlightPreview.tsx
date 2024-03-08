@@ -10,8 +10,8 @@ export function SpotlightPreview() {
       <Image className="overlay-content" src={banner} alt="thumbnail" />
 
       <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
+        className="-top-40 left-0 md:left-60 md:-top-10"
+        fill="orange"
       />
       <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
         <h1
@@ -34,6 +34,8 @@ export function SpotlightPreview() {
         </p>
         <button
           // data-aos="fade-up"
+          data-scroll
+          data-scroll-speed="0.06"
           className="inline-flex h-12 animate-shimmer mt-12 items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
         >
           Work with us?

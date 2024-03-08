@@ -18,7 +18,7 @@ export function BentoGridSecond() {
       <h1
         // data-aos="zoom-in-up"
         data-scroll
-        data-scroll-speed="0.06"
+        data-scroll-speed="0.08"
         className=" text-center  mb-12 text-4xl md:text-5xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
       >
         <span className="text-3xl">Project</span> <br /> Interior Architecture.
