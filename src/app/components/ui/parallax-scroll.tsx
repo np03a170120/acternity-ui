@@ -36,13 +36,17 @@ export const ParallaxScroll = ({
       >
         <div className="grid col-span-3 gap-10">
           <h1
-            data-aos="fade-up"
+            // data-aos="fade-up"
+            data-scroll
+            data-scroll-speed="0.05"
             className=" z-10  text-left text-4xl md:text-5xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
           >
             <span className="text-3xl">Memories</span> <br /> All that we share
           </h1>
           <p
-            data-aos="fade-up"
+            // data-aos="fade-up"
+            data-scroll
+            data-scroll-speed="0.08"
             className=" font-normal text-base text-neutral-300 max-w-lg  mr-12"
           >
             कृथ्या , translating to stories is an architecture and design firm
@@ -53,6 +57,8 @@ export const ParallaxScroll = ({
         <div className="grid gap-10">
           {firstPart.map((el, idx) => (
             <motion.div
+              data-scroll
+              data-scroll-speed="0.1"
               style={{ y: translateFirst }} // Apply the translateY motion value here
               key={"grid-1" + idx}
             >
@@ -81,7 +87,12 @@ export const ParallaxScroll = ({
         </div>
         <div className="grid gap-10">
           {thirdPart.map((el, idx) => (
-            <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
+            <motion.div
+              data-scroll
+              data-scroll-speed="0.2"
+              style={{ y: translateThird }}
+              key={"grid-3" + idx}
+            >
               <Image
                 src={el}
                 className="h-80 w-full object-cover object-left-top  gap-10 !m-0 !p-0"
