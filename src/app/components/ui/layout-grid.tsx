@@ -27,12 +27,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
   return (
     <>
-      <div
-        data-aos-easing="linear"
-        data-aos-duration="200"
-        data-aos="fade-down"
-        className="w-full  mr-24 h-[65vh] p-10 grid grid-cols-1 md:grid-cols-6 max-w-7xl mx-auto gap-4 "
-      >
+      <div className="w-full  mr-24 h-[65vh] p-10 grid grid-cols-1 md:grid-cols-6 max-w-7xl mx-auto gap-4 ">
         {cards.map((card, i) => (
           <div key={i} className={cn(card.className, "")}>
             <motion.div
@@ -62,7 +57,11 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
           animate={{ opacity: selected?.id ? 0.3 : 0 }}
         />
       </div>
-      <button className="float-right mr-32 inline-flex h-12 animate-shimmer  items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+      <button
+        data-scroll
+        data-scroll-speed="0.06"
+        className="float-right mr-32 inline-flex h-12 animate-shimmer  items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+      >
         View All Crafts
       </button>
     </>

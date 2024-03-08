@@ -11,14 +11,18 @@ export function LayoutGridHome() {
     <div className=" w-full">
       <div className="flex items-center justify-between">
         <h1
-          data-aos="fade-up"
+          // data-aos="fade-up"
+          data-scroll
+          data-scroll-speed="0.06"
           className=" ml-12 text-left text-4xl md:text-5xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
         >
           <span className="text-3xl">Project</span> <br /> Residental
           Architecture.
         </h1>
         <p
-          data-aos="fade-up"
+          // data-aos="fade-up"
+          data-scroll
+          data-scroll-speed="0.02"
           className=" font-normal text-base text-neutral-300 max-w-lg text-right mr-12"
         >
           कृथ्या , translating to stories is an architecture and design firm
