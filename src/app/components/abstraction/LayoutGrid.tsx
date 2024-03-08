@@ -8,7 +8,7 @@ import { LayoutGrid } from "../ui/layout-grid";
 
 export function LayoutGridHome() {
   return (
-    <div className="h-screen py-20 w-full">
+    <div className=" w-full">
       <div className="flex items-center justify-between">
         <h1
           data-aos="fade-up"
