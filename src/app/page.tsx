@@ -1,10 +1,12 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { BentoGridSecond } from "./components/abstraction/BentoGrid";
 import { FloatingNavbar } from "./components/abstraction/FloatingNav";
 import { LayoutGridHome } from "./components/abstraction/LayoutGrid";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Parallax } from "./components/abstraction/Parallax";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 
 export default function Home() {
   useEffect(() => {
@@ -19,10 +21,11 @@ export default function Home() {
   return (
     <>
       <FloatingNavbar />
-      <div className="relative mb-24">
+      <div className="relative py-20 ">
         <LayoutGridHome />
       </div>
       <BentoGridSecond />
+      <Parallax />
     </>
   );
 }
