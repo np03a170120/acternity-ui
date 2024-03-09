@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <main>
         <FloatingNavbar />
-        <div className="relative py-20 ">
+        <div className="relative pb-20 ">
           <LayoutGridHome />
         </div>
         <BentoGridSecond />
