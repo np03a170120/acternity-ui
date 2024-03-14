@@ -34,25 +34,23 @@ export const ParallaxScroll = ({
         className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-6 items-start  max-w-8xl mx-auto gap-10 py-40  px-12"
         ref={gridRef}
       >
-        <div className="grid col-span-3 gap-10">
-          <h1
-            // data-aos="fade-up"
-            data-scroll
-            data-scroll-speed="0.05"
-            className=" z-10  text-left text-4xl md:text-5xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
-          >
-            <span className="text-3xl">Memories</span> <br /> All that we share
-          </h1>
-          <p
-            // data-aos="fade-up"
-            data-scroll
-            data-scroll-speed="0.08"
-            className=" font-normal text-base text-neutral-300 max-w-lg  mr-12"
-          >
-            कृथ्या , translating to stories is an architecture and design firm
-            based in Kathmandu started in 2019 by a young group of architects
-            with a common vision to redefine architecture and design
-          </p>
+        <div className="grid col-span-3 gap-4">
+          <div>
+            <h1 className=" mb-4 z-10  text-left text-4xl md:text-5xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+              <span className="text-3xl">Project</span> <br /> Commercial
+              Architecture
+            </h1>
+            <p className="mb-8 font-normal text-base text-neutral-300 max-w-lg  mr-12">
+              कृथ्या , translating to stories is an architecture and design firm
+              based in Kathmandu started in 2019 by a young group of architects
+              with a common vision to redefine architecture and design
+            </p>
+            <div className=" w-full">
+              <button className="  inline-flex h-12 animate-shimmer  items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                View All Crafts
+              </button>
+            </div>
+          </div>
         </div>
         <div className="grid gap-10">
           {firstPart.map((el, idx) => (

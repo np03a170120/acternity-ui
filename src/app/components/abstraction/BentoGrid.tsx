@@ -1,16 +1,7 @@
-import { cn } from "../../util/cn";
-import React from "react";
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import Image from "next/image";
+import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 
 import arch_4 from "../../../assets/images/arch_4.jpg";
-
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
 
 export function BentoGridSecond() {
   return (
@@ -32,10 +23,18 @@ export function BentoGridSecond() {
             description={item.description}
             header={item.header}
             className={item.className}
-            icon={item.icon}
           />
         ))}
       </BentoGrid>
+      <div className="text-center mt-8">
+        <button
+          data-scroll
+          data-scroll-speed="0.06"
+          className="  inline-flex h-12 animate-shimmer  items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+        >
+          View All Crafts
+        </button>
+      </div>
     </>
   );
 }
@@ -54,21 +53,18 @@ const items = [
     description: "Explore the birth of groundbreaking ideas and inventions.",
     header: <Skeleton />,
     className: "md:col-span-2",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "The Digital Revolution",
     description: "Dive into the transformative power of technology.",
     header: <Skeleton />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "The Art of Design",
     description: "Discover the beauty of thoughtful and functional design.",
     header: <Skeleton />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "The Power of Communication",
@@ -76,6 +72,5 @@ const items = [
       "Understand the impact of effective communication in our lives.",
     header: <Skeleton />,
     className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 ];
